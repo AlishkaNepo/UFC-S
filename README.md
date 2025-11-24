@@ -132,7 +132,7 @@
     <div class="name">Ерасыл</div>
   </div>
 
-  <div class="weight">Полусредний вес • Главный бой</div>
+  <div class="weight">Полусредний вес • Со-главный бой</div>
 </div>
 
 <footer>
