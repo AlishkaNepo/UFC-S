@@ -8,8 +8,39 @@
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
     body { background-color:#111; color:#fff; line-height:1.5; padding:10px; }
 
-    header { text-align:center; padding:15px; background-color:#1a1a1a; border-bottom:2px solid #e60000; }
-    header .logo { font-size:22px; font-weight:700; color:#e60000; }
+    header {
+      padding:15px;
+      background-color:#1a1a1a;
+      border-bottom:2px solid #e60000;
+    }
+
+    .header-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    header .logo {
+      font-size:22px;
+      font-weight:700;
+      color:#e60000;
+    }
+
+    /* КНОПКА */
+    .header-btn{
+      background:#e60000;
+      color:#fff;
+      text-decoration:none;
+      padding:6px 12px;
+      border-radius:20px;
+      font-size:14px;
+      font-weight:600;
+      transition:0.2s;
+    }
+
+    .header-btn:hover{
+      background:#ff1a1a;
+    }
 
     .event-header { margin:20px 0; text-align:center; }
     .event-header h1 { font-size:20px; margin-bottom:5px; }
@@ -34,7 +65,6 @@
       text-align:center;
     }
 
-    /* КРУГЛАЯ РАМКА ДЛЯ ФОТО */
     .photo {
       width:100px;
       height:100px;
@@ -70,22 +100,25 @@
 
     footer { text-align:center; padding:15px; background-color:#1a1a1a; border-top:2px solid #e60000; color:#ccc; font-size:12px; }
 
-    /* --- Адаптация под маленькие экраны --- */
     @media screen and (max-width:400px){
-      .photo {
-        width:80px;
-        height:80px;
-      }
+      .photo { width:80px; height:80px; }
       .name { font-size:14px; }
       .vs { font-size:20px; margin:0 5px; }
       .weight { font-size:12px; }
+      .header-btn{ font-size:12px; padding:5px 10px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">UFC 344</div>
+  <div class="header-inner">
+    <div class="logo">UFC 344</div>
+
+    <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343" target="_blank">
+      UFC 343
+    </a>
+  </div>
 </header>
 
 <div class="event-header">
@@ -93,7 +126,6 @@
   <p>Место проведения: Рим, Италия</p>
 </div>
 
-<!-- Первый бой -->
 <div class="fight-card">
   <div class="fighter">
     <div class="photo">
@@ -114,7 +146,6 @@
   <div class="weight">Лёгкий вес • Главный бой</div>
 </div>
 
-<!-- Второй бой -->
 <div class="fight-card">
   <div class="fighter">
     <div class="photo">
