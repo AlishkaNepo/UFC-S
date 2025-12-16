@@ -166,6 +166,46 @@
   <div class="weight">Полусредний вес • Со-главный бой</div>
 </div>
 
+<div class="fight-card">
+  <div class="fighter">
+    <div class="photo">
+      <img src="jahan.jpg" alt="Жахан">
+    </div>
+    <div class="name">Жахан</div>
+  </div>
+
+  <div class="vs">VS</div>
+
+  <div class="fighter">
+    <div class="photo">
+      <img src="ibr.jpg" alt="Ибрахим">
+    </div>
+    <div class="name">Ибрахим</div>
+  </div>
+
+  <div class="weight">Полусредний вес </div>
+</div>
+
+<div class="fight-card">
+  <div class="fighter">
+    <div class="photo">
+      <img src="roma.jpg" alt="Рома">
+    </div>
+    <div class="name">Рома</div>
+  </div>
+
+  <div class="vs">VS</div>
+
+  <div class="fighter">
+    <div class="photo">
+      <img src="abosh.jpg" alt="Абылайхан">
+    </div>
+    <div class="name">Абылайхан</div>
+  </div>
+
+  <div class="weight">Легкий вес </div>
+</div>
+
 <footer>
   © 2025 My Fight Promotion. Все права защищены.
 </footer>
