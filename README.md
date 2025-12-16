@@ -48,6 +48,7 @@
 
     .ufc-s-link:hover{
       background:#e60000;
+      backgrounf-color:#e60000;
     }
 
     /* КНОПКА */
@@ -147,7 +148,7 @@
   <div class="header-inner">
     <div class="logo-wrap">
       <div class="logo">UFC 344</div>
-      <a class="ufc-s-link" href="https://AlishkaNepo.github.io/P4P/" target="_blank">UFC-S</a>
+      <a class="ufc-s-link" href="https://AlishkaNepo.github.io/P4P/" target="_blank">P4P</a>
     </div>
 
     <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343" target="_blank">
