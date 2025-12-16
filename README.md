@@ -1,9 +1,12 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UFC 344 - Мобильная версия</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Inter', sans-serif; }
     body { background-color:#111; color:#fff; line-height:1.5; padding:10px; }
@@ -20,10 +23,31 @@
       align-items:center;
     }
 
+    .logo-wrap{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
     header .logo {
       font-size:22px;
       font-weight:700;
       color:#e60000;
+    }
+
+    .ufc-s-link{
+      font-size:14px;
+      font-weight:600;
+      color:#fff;
+      text-decoration:none;
+      padding:4px 12px;
+      border:1px solid #e60000;
+      border-radius:20px;
+      transition:0.2s;
+    }
+
+    .ufc-s-link:hover{
+      background:#e60000;
     }
 
     /* КНОПКА */
@@ -98,7 +122,14 @@
       width:100%;
     }
 
-    footer { text-align:center; padding:15px; background-color:#1a1a1a; border-top:2px solid #e60000; color:#ccc; font-size:12px; }
+    footer {
+      text-align:center;
+      padding:15px;
+      background-color:#1a1a1a;
+      border-top:2px solid #e60000;
+      color:#ccc;
+      font-size:12px;
+    }
 
     @media screen and (max-width:400px){
       .photo { width:80px; height:80px; }
@@ -106,6 +137,7 @@
       .vs { font-size:20px; margin:0 5px; }
       .weight { font-size:12px; }
       .header-btn{ font-size:12px; padding:5px 10px; }
+      .ufc-s-link{ font-size:12px; padding:3px 10px; }
     }
   </style>
 </head>
@@ -113,7 +145,10 @@
 
 <header>
   <div class="header-inner">
-    <div class="logo">UFC 344</div>
+    <div class="logo-wrap">
+      <div class="logo">UFC 344</div>
+      <a class="ufc-s-link" href="https://AlishkaNepo.github.io/P4P/" target="_blank">UFC-S</a>
+    </div>
 
     <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343" target="_blank">
       UFC 343
@@ -128,18 +163,14 @@
 
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo">
-      <img src="tomi.jpg" alt="Танат">
-    </div>
+    <div class="photo"><img src="tomi.jpg" alt="Танат"></div>
     <div class="name">Танат</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo">
-      <img src="ali.jpg" alt="Али">
-    </div>
+    <div class="photo"><img src="ali.jpg" alt="Али"></div>
     <div class="name">Али</div>
   </div>
 
@@ -148,18 +179,14 @@
 
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo">
-      <img src="beka2.jpg" alt="Бексултан">
-    </div>
+    <div class="photo"><img src="beka2.jpg" alt="Бексултан"></div>
     <div class="name">Бексултан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo">
-      <img src="era.jpg" alt="Ерасыл">
-    </div>
+    <div class="photo"><img src="era.jpg" alt="Ерасыл"></div>
     <div class="name">Ерасыл</div>
   </div>
 
@@ -168,42 +195,34 @@
 
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo">
-      <img src="jahan.jpg" alt="Жахан">
-    </div>
+    <div class="photo"><img src="jahan.jpg" alt="Жахан"></div>
     <div class="name">Жахан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo">
-      <img src="ibr.jpg" alt="Ибрахим">
-    </div>
+    <div class="photo"><img src="ibr.jpg" alt="Ибрахим"></div>
     <div class="name">Ибрахим</div>
   </div>
 
-  <div class="weight">Полусредний вес </div>
+  <div class="weight">Полусредний вес</div>
 </div>
 
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo">
-      <img src="roma.jpg" alt="Рома">
-    </div>
+    <div class="photo"><img src="roma.jpg" alt="Рома"></div>
     <div class="name">Рома</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo">
-      <img src="abosh.jpg" alt="Абылайхан">
-    </div>
+    <div class="photo"><img src="abosh.jpg" alt="Абылайхан"></div>
     <div class="name">Абылайхан</div>
   </div>
 
-  <div class="weight">Легкий вес </div>
+  <div class="weight">Легкий вес</div>
 </div>
 
 <footer>
