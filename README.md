@@ -149,7 +149,7 @@
 <div class="fight-card">
   <div class="fighter">
     <div class="photo">
-      <img src="beka.jpg" alt="Бексултан">
+      <img src="beka2.jpg" alt="Бексултан">
     </div>
     <div class="name">Бексултан</div>
   </div>
