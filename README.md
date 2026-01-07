@@ -1,249 +1,281 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UFC 344</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UFC 344</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
 
-    body {
-      background: #111;
-      color: #fff;
-      padding: 10px;
-    }
+body {
+  background: #0e0e0e;
+  color: #fff;
+  padding: 16px;
+  overflow-x: auto; /* 🔥 если экран узкий — скролл, но одна строка */
+}
 
-    header {
-      background: #1a1a1a;
-      border-bottom: 2px solid #e60000;
-      padding: 15px;
-    }
+/* ===== HEADER ===== */
+header {
+  background: #111;
+  border-bottom: 2px solid #e60000;
+  padding: 14px;
+  margin-bottom: 24px;
+}
 
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+header h1 {
+  color: #e60000;
+  text-align: center;
+  font-size: 20px;
+}
 
-    .logo {
-      font-size: 22px;
-      font-weight: 700;
-      color: #e60000;
-    }
+/* ===== TITLE ===== */
+.event-info {
+  text-align: center;
+  margin-bottom: 28px;
+}
 
-    .header-btn {
-      background: #e60000;
-      color: #fff;
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-    }
+.event-info .title {
+  font-weight: 600;
+}
 
-    .event-header {
-      text-align: center;
-      margin: 20px 0;
-    }
+.event-info .place {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 4px;
+}
 
-    .event-header h1 {
-      font-size: 20px;
-    }
+/* ===== FIGHT CARD ===== */
+.fight-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;              /* 🔥 ОДНА СТРОКА */
+  gap: 20px;
+  background: #141414;
+  border: 2px solid #e60000;
+  border-radius: 14px;
+  padding: 16px;
+  margin-bottom: 22px;
+  min-width: 520px;               /* 🔥 защита от ломания */
+}
 
-    .event-header p {
-      font-size: 14px;
-      color: #ccc;
-    }
+/* ===== FIGHTERS ===== */
+.fighters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
 
-    /* FIGHT CARD */
-    .fight-card {
-      background: #1a1a1a;
-      border: 2px solid #e60000;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+.fighter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+}
 
-    .fighter {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-width: 90px;
-      text-align: center;
-    }
+.photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #e60000;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
 
-    .photo {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 3px solid #e60000;
-      margin-bottom: 6px;
-    }
+.photo.win {
+  border-color: #34d665;
+}
 
-    .photo.win {
-      border-color: #34d665;
-    }
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.vs {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e60000;
+}
 
-    .name {
-      font-size: 15px;
-      font-weight: 600;
-    }
+/* ===== INFO ===== */
+.fight-info {
+  text-align: right;
+  white-space: nowrap;
+}
 
-    .vs {
-      font-size: 22px;
-      font-weight: 700;
-      color: #e60000;
-    }
+.weight {
+  font-size: 13px;
+  color: #ccc;
+}
 
-    /* ВАЖНО: вертикальный блок */
-    .fight-info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-      text-align: right;
-      gap: 6px;
-    }
+.result {
+  margin-top: 6px;
+  font-size: 13px;
+}
 
-    .weight {
-      font-size: 13px;
-      color: #ccc;
-    }
+.win-text {
+  color: #34d665;
+}
 
-    .result {
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 1.4;
-    }
+.cancel {
+  color: #e60000;
+  font-weight: 600;
+}
 
-    .result.win {
-      color: #34d665;
-    }
+/* ===== MOBILE — ТОЛЬКО УМЕНЬШЕНИЕ ===== */
+@media (max-width: 600px) {
 
-    .result.cancel {
-      color: red;
-    }
+  header h1 {
+    font-size: 18px;
+  }
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #1a1a1a;
-      border-top: 2px solid #e60000;
-      color: #ccc;
-      font-size: 12px;
-      margin-top: 20px;
-    }
+  .fight-card {
+    padding: 10px;
+    gap: 14px;
+  }
 
-    /* MOBILE */
-    @media (max-width: 480px) {
-      .fight-card {
-        flex-direction: column;
-        text-align: center;
-      }
+  .photo {
+    width: 55px;
+    height: 55px;
+  }
 
-      .fight-info {
-        align-items: center;
-        text-align: center;
-        margin-top: 8px;
-      }
+  .fighter {
+    font-size: 11px;
+  }
 
-      .vs {
-        margin: 6px 0;
-      }
+  .vs {
+    font-size: 14px;
+  }
 
-      .photo {
-        width: 75px;
-        height: 75px;
-      }
-    }
-  </style>
+  .weight,
+  .result {
+    font-size: 11px;
+  }
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 12px;
+  margin-top: 40px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <div class="header-inner">
-    <div class="logo">UFC 344</div>
-    <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343/" target="_blank">UFC 343</a>
-  </div>
+  <h1>UFC 344</h1>
 </header>
 
-<div class="event-header">
-  <h1>Главный кард — 6 Января</h1>
-  <p>Рим, Италия</p>
+<div class="event-info">
+  <div class="title">Главный кард — 6 января</div>
+  <div class="place">Место проведения: Рим, Италия</div>
 </div>
 
+<!-- 1 -->
 <div class="fight-card">
-  <div class="fighter">
-    <div class="photo win"><img src="tomi.jpg"></div>
-    <div class="name">Танат</div>
+  <div class="fighters">
+    <div class="fighter">
+      <div class="photo win"><img src="tomi.jpg"></div>
+      <span>Танат</span>
+    </div>
+    <span class="vs">VS</span>
+    <div class="fighter">
+      <div class="photo"><img src="ali.jpg"></div>
+      <span>Али</span>
+    </div>
   </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="ali.jpg"></div>
-    <div class="name">Али</div>
-  </div>
-
   <div class="fight-info">
     <div class="weight">Лёгкий вес • Главный бой</div>
-    <div class="result win">Судейское решение • Р5 05:00</div>
+    <div class="result win-text">Судейское решение • Р5 05:00</div>
   </div>
 </div>
 
+<!-- 2 -->
 <div class="fight-card">
-  <div class="fighter">
-    <div class="photo win"><img src="beka2.jpg"></div>
-    <div class="name">Бексултан</div>
+  <div class="fighters">
+    <div class="fighter">
+      <div class="photo"><img src="beka2.jpg"></div>
+      <span>Бексултан</span>
+    </div>
+    <span class="vs">VS</span>
+    <div class="fighter">
+      <div class="photo win"><img src="ibr.jpg"></div>
+      <span>Ибрахим</span>
+    </div>
   </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="ibr.jpg"></div>
-    <div class="name">Ибрахим</div>
-  </div>
-
   <div class="fight-info">
     <div class="weight">Полусредний вес • Со-главный бой</div>
-    <div class="result win">Добровольная сдача • Р1 04:45</div>
+    <div class="result win-text">Добровольная сдача • Р1 04:45</div>
+  </div>
+</div>
+
+<!-- 3 -->
+<div class="fight-card">
+  <div class="fighters">
+    <div class="fighter">
+      <div class="photo"><img src="jahan.jpg"></div>
+      <span>Жахан</span>
+    </div>
+    <span class="vs">VS</span>
+    <div class="fighter">
+      <div class="photo win"><img src="abosh.jpg"></div>
+      <span>Абылайхан</span>
+    </div>
+  </div>
+  <div class="fight-info">
+    <div class="weight">Лёгкий вес</div>
+    <div class="result win-text">Судейское решение • Р3 05:00</div>
+  </div>
+</div>
+
+<!-- 4 -->
+<div class="fight-card">
+  <div class="fighters">
+    <div class="fighter">
+      <div class="photo"><img src="beka2.jpg"></div>
+      <span>Бексултан</span>
+    </div>
+    <span class="vs">VS</span>
+    <div class="fighter">
+      <div class="photo"><img src="era.jpg"></div>
+      <span>Ерасыл</span>
+    </div>
+  </div>
+  <div class="fight-info">
+    <div class="weight">Полусредний вес</div>
+    <div class="result cancel">Отменен</div>
   </div>
 </div>
 
 <div class="fight-card">
-  <div class="fighter">
-    <div class="photo"><img src="beka2.jpg"></div>
-    <div class="name">Бексултан</div>
+  <div class="fighters">
+    <div class="fighter">
+      <div class="photo"><img src="jahan.jpg"></div>
+      <span>Жахан</span>
+    </div>
+    <span class="vs">VS</span>
+    <div class="fighter">
+      <div class="photo"><img src="ibr.jpg"></div>
+      <span>Ибрахим</span>
+    </div>
   </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="era.jpg"></div>
-    <div class="name">Ерасыл</div>
-  </div>
-
   <div class="fight-info">
     <div class="weight">Полусредний вес</div>
-    <div class="result cancel">Отменён</div>
+    <div class="result cancel">Отменен</div>
   </div>
 </div>
 
