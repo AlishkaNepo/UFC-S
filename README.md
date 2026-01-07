@@ -64,30 +64,14 @@
 
     /* FIGHT CARD */
     .fight-card {
-      position: relative;
       background: #1a1a1a;
-      padding: 16px 16px 16px 20px;
+      border: 2px solid #e60000;
+      border-radius: 12px;
+      padding: 15px;
       margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 14px;
-      width: 100%;
-    }
-
-    /* VERTICAL LINE */
-    .fight-card::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: #e60000;
-      border-radius: 2px;
-    }
-
-    .fight-card.win::before {
-      background: #34d665;
     }
 
     .fighter {
@@ -128,5 +112,144 @@
       color: #e60000;
     }
 
+    /* ВАЖНО: вертикальный блок */
     .fight-info {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: right;
+      gap: 6px;
+    }
+
+    .weight {
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    .result {
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .result.win {
+      color: #34d665;
+    }
+
+    .result.cancel {
+      color: red;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1a1a1a;
+      border-top: 2px solid #e60000;
+      color: #ccc;
+      font-size: 12px;
+      margin-top: 20px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 480px) {
+      .fight-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .fight-info {
+        align-items: center;
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .vs {
+        margin: 6px 0;
+      }
+
+      .photo {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">UFC 344</div>
+    <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343/" target="_blank">UFC 343</a>
+  </div>
+</header>
+
+<div class="event-header">
+  <h1>Главный кард — 6 Января</h1>
+  <p>Рим, Италия</p>
+</div>
+
+<div class="fight-card">
+  <div class="fighter">
+    <div class="photo win"><img src="tomi.jpg"></div>
+    <div class="name">Танат</div>
+  </div>
+
+  <div class="vs">VS</div>
+
+  <div class="fighter">
+    <div class="photo"><img src="ali.jpg"></div>
+    <div class="name">Али</div>
+  </div>
+
+  <div class="fight-info">
+    <div class="weight">Лёгкий вес • Главный бой</div>
+    <div class="result win">Судейское решение • Р5 05:00</div>
+  </div>
+</div>
+
+<div class="fight-card">
+  <div class="fighter">
+    <div class="photo win"><img src="beka2.jpg"></div>
+    <div class="name">Бексултан</div>
+  </div>
+
+  <div class="vs">VS</div>
+
+  <div class="fighter">
+    <div class="photo"><img src="ibr.jpg"></div>
+    <div class="name">Ибрахим</div>
+  </div>
+
+  <div class="fight-info">
+    <div class="weight">Полусредний вес • Со-главный бой</div>
+    <div class="result win">Добровольная сдача • Р1 04:45</div>
+  </div>
+</div>
+
+<div class="fight-card">
+  <div class="fighter">
+    <div class="photo"><img src="beka2.jpg"></div>
+    <div class="name">Бексултан</div>
+  </div>
+
+  <div class="vs">VS</div>
+
+  <div class="fighter">
+    <div class="photo"><img src="era.jpg"></div>
+    <div class="name">Ерасыл</div>
+  </div>
+
+  <div class="fight-info">
+    <div class="weight">Полусредний вес</div>
+    <div class="result cancel">Отменён</div>
+  </div>
+</div>
+
+<footer>
+  © 2025 My Fight Promotion. Все права защищены.
+</footer>
+
+</body>
+</html>
