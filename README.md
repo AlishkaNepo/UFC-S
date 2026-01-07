@@ -20,7 +20,6 @@
       padding: 10px;
     }
 
-    /* HEADER */
     header {
       background: #1a1a1a;
       border-bottom: 2px solid #e60000;
@@ -49,7 +48,6 @@
       font-weight: 600;
     }
 
-    /* EVENT */
     .event-header {
       text-align: center;
       margin: 20px 0;
@@ -57,7 +55,6 @@
 
     .event-header h1 {
       font-size: 20px;
-      margin-bottom: 4px;
     }
 
     .event-header p {
@@ -67,14 +64,30 @@
 
     /* FIGHT CARD */
     .fight-card {
+      position: relative;
       background: #1a1a1a;
-      border: 2px solid #e60000;
-      border-radius: 12px;
-      padding: 15px;
+      padding: 16px 16px 16px 20px;
       margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 14px;
+      width: 100%;
+    }
+
+    /* VERTICAL LINE */
+    .fight-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #e60000;
+      border-radius: 2px;
+    }
+
+    .fight-card.win::before {
+      background: #34d665;
     }
 
     .fighter {
@@ -117,188 +130,3 @@
 
     .fight-info {
       flex: 1;
-      text-align: right;
-    }
-
-    .weight {
-      font-size: 13px;
-      color: #ccc;
-      margin-bottom: 6px;
-    }
-
-    .result {
-      font-size: 14px;
-      font-weight: 600;
-      white-space: normal;
-      word-wrap: break-word;
-      line-height: 1.4;
-    }
-
-    .result.win {
-      color: #34d665;
-    }
-
-    .result.cancel {
-      color: red;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #1a1a1a;
-      border-top: 2px solid #e60000;
-      color: #ccc;
-      font-size: 12px;
-      margin-top: 20px;
-    }
-
-    /* MOBILE FIX */
-    @media (max-width: 480px) {
-
-      .fight-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .fighter {
-        min-width: unset;
-      }
-
-      .vs {
-        margin: 6px 0;
-      }
-
-      .fight-info {
-        text-align: center;
-        width: 100%;
-        margin-top: 8px;
-      }
-
-      .photo {
-        width: 75px;
-        height: 75px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="header-inner">
-    <div class="logo">UFC 344</div>
-    <a class="header-btn" href="https://AlishkaNepo.github.io/ufc-343/" target="_blank">UFC 343</a>
-  </div>
-</header>
-
-<div class="event-header">
-  <h1>Главный кард — 6 Января</h1>
-  <p>Место проведения: Рим, Италия</p>
-</div>
-
-<!-- БОЙ 1 -->
-<div class="fight-card">
-  <div class="fighter">
-    <div class="photo win"><img src="tomi.jpg" alt="Танат"></div>
-    <div class="name">Танат</div>
-  </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="ali.jpg" alt="Али"></div>
-    <div class="name">Али</div>
-  </div>
-
-  <div class="fight-info">
-    <div class="weight">Лёгкий вес • Главный бой</div>
-    <div class="result win">Судейское решение • Р5 05:00</div>
-  </div>
-</div>
-
-<!-- БОЙ 2 -->
-<div class="fight-card">
-  <div class="fighter">
-    <div class="photo win"><img src="beka2.jpg" alt="Бексултан"></div>
-    <div class="name">Бексултан</div>
-  </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="ibr.jpg" alt="Ибрахим"></div>
-    <div class="name">Ибрахим</div>
-  </div>
-
-  <div class="fight-info">
-    <div class="weight">Полусредний вес • Со-главный бой</div>
-    <div class="result win">Добровольная сдача • Р1 04:45</div>
-  </div>
-</div>
-
-<!-- БОЙ 3 -->
-<div class="fight-card">
-  <div class="fighter">
-    <div class="photo"><img src="jahan.jpg" alt="Жахан"></div>
-    <div class="name">Жахан</div>
-  </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo win"><img src="abosh.jpg" alt="Абылайхан"></div>
-    <div class="name">Абылайхан</div>
-  </div>
-
-  <div class="fight-info">
-    <div class="weight">Лёгкий вес</div>
-    <div class="result win">Судейское решение • Р3 05:00</div>
-  </div>
-</div>
-
-<!-- БОЙ 4 -->
-<div class="fight-card">
-  <div class="fighter">
-    <div class="photo"><img src="beka2.jpg" alt="Бексултан"></div>
-    <div class="name">Бексултан</div>
-  </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="era.jpg" alt="Ерасыл"></div>
-    <div class="name">Ерасыл</div>
-  </div>
-
-  <div class="fight-info">
-    <div class="weight">Полусредний вес • Со-главный бой</div>
-    <div class="result cancel">Отменён</div>
-  </div>
-</div>
-
-<!-- БОЙ 5 -->
-<div class="fight-card">
-  <div class="fighter">
-    <div class="photo"><img src="jahan.jpg" alt="Жахан"></div>
-    <div class="name">Жахан</div>
-  </div>
-
-  <div class="vs">VS</div>
-
-  <div class="fighter">
-    <div class="photo"><img src="ibr.jpg" alt="Ибрахим"></div>
-    <div class="name">Ибрахим</div>
-  </div>
-
-  <div class="fight-info">
-    <div class="weight">Полусредний вес</div>
-    <div class="result cancel">Отменён</div>
-  </div>
-</div>
-
-<footer>
-  © 2025 My Fight Promotion. Все права защищены.
-</footer>
-
-</body>
-</html>
