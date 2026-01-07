@@ -129,6 +129,9 @@
     .result {
       font-size: 14px;
       font-weight: 600;
+      white-space: normal;
+      word-wrap: break-word;
+      line-height: 1.4;
     }
 
     .result.win {
@@ -149,14 +152,32 @@
       margin-top: 20px;
     }
 
+    /* MOBILE FIX */
     @media (max-width: 480px) {
+
+      .fight-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .fighter {
+        min-width: unset;
+      }
+
+      .vs {
+        margin: 6px 0;
+      }
+
+      .fight-info {
+        text-align: center;
+        width: 100%;
+        margin-top: 8px;
+      }
+
       .photo {
         width: 75px;
         height: 75px;
-      }
-
-      .fight-card {
-        gap: 10px;
       }
     }
   </style>
@@ -178,14 +199,14 @@
 <!-- БОЙ 1 -->
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo win"><img src="tomi.jpg"></div>
+    <div class="photo win"><img src="tomi.jpg" alt="Танат"></div>
     <div class="name">Танат</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo"><img src="ali.jpg"></div>
+    <div class="photo"><img src="ali.jpg" alt="Али"></div>
     <div class="name">Али</div>
   </div>
 
@@ -198,14 +219,14 @@
 <!-- БОЙ 2 -->
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo win"><img src="beka2.jpg"></div>
+    <div class="photo win"><img src="beka2.jpg" alt="Бексултан"></div>
     <div class="name">Бексултан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo"><img src="ibr.jpg"></div>
+    <div class="photo"><img src="ibr.jpg" alt="Ибрахим"></div>
     <div class="name">Ибрахим</div>
   </div>
 
@@ -218,14 +239,14 @@
 <!-- БОЙ 3 -->
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo"><img src="jahan.jpg"></div>
+    <div class="photo"><img src="jahan.jpg" alt="Жахан"></div>
     <div class="name">Жахан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo win"><img src="abosh.jpg"></div>
+    <div class="photo win"><img src="abosh.jpg" alt="Абылайхан"></div>
     <div class="name">Абылайхан</div>
   </div>
 
@@ -238,14 +259,14 @@
 <!-- БОЙ 4 -->
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo"><img src="beka2.jpg"></div>
+    <div class="photo"><img src="beka2.jpg" alt="Бексултан"></div>
     <div class="name">Бексултан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo"><img src="era.jpg"></div>
+    <div class="photo"><img src="era.jpg" alt="Ерасыл"></div>
     <div class="name">Ерасыл</div>
   </div>
 
@@ -258,14 +279,14 @@
 <!-- БОЙ 5 -->
 <div class="fight-card">
   <div class="fighter">
-    <div class="photo"><img src="jahan.jpg"></div>
+    <div class="photo"><img src="jahan.jpg" alt="Жахан"></div>
     <div class="name">Жахан</div>
   </div>
 
   <div class="vs">VS</div>
 
   <div class="fighter">
-    <div class="photo"><img src="ibr.jpg"></div>
+    <div class="photo"><img src="ibr.jpg" alt="Ибрахим"></div>
     <div class="name">Ибрахим</div>
   </div>
 
