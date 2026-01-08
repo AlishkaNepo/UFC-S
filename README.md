@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
@@ -19,24 +18,45 @@ body {
   background: #0e0e0e;
   color: #fff;
   padding: 16px;
-  overflow-x: auto; /* 🔥 если экран узкий — скролл, но одна строка */
+  overflow-x: auto;
 }
 
 /* ===== HEADER ===== */
 header {
   background: #111;
   border-bottom: 2px solid #e60000;
-  padding: 14px;
+  padding: 14px 18px;
   margin-bottom: 24px;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
   color: #e60000;
-  text-align: center;
   font-size: 20px;
 }
 
-/* ===== TITLE ===== */
+/* ===== HEADER LINKS ===== */
+.header-links {
+  display: flex;
+  gap: 10px;
+}
+
+.header-links a {
+  background: #e60000;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ===== EVENT INFO ===== */
 .event-info {
   text-align: center;
   margin-bottom: 28px;
@@ -49,22 +69,21 @@ header h1 {
 .event-info .place {
   font-size: 13px;
   color: #aaa;
-  margin-top: 4px;
 }
 
 /* ===== FIGHT CARD ===== */
 .fight-card {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: nowrap;              /* 🔥 ОДНА СТРОКА */
+  align-items: center;
+  flex-wrap: nowrap;
   gap: 20px;
   background: #141414;
   border: 2px solid #e60000;
   border-radius: 14px;
   padding: 16px;
   margin-bottom: 22px;
-  min-width: 520px;               /* 🔥 защита от ломания */
+  min-width: 520px;
 }
 
 /* ===== FIGHTERS ===== */
@@ -72,7 +91,6 @@ header h1 {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: nowrap;
   white-space: nowrap;
 }
 
@@ -133,35 +151,12 @@ header h1 {
   font-weight: 600;
 }
 
-/* ===== MOBILE — ТОЛЬКО УМЕНЬШЕНИЕ ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
-
-  header h1 {
-    font-size: 18px;
-  }
-
-  .fight-card {
-    padding: 10px;
-    gap: 14px;
-  }
-
-  .photo {
-    width: 55px;
-    height: 55px;
-  }
-
-  .fighter {
-    font-size: 11px;
-  }
-
-  .vs {
-    font-size: 14px;
-  }
-
-  .weight,
-  .result {
-    font-size: 11px;
-  }
+  .photo { width: 55px; height: 55px; }
+  .fighter { font-size: 11px; }
+  .vs { font-size: 14px; }
+  .weight, .result { font-size: 11px; }
 }
 
 /* ===== FOOTER ===== */
@@ -177,7 +172,13 @@ footer {
 <body>
 
 <header>
-  <h1>UFC 344</h1>
+  <div class="header-inner">
+    <h1>UFC 344</h1>
+    <div class="header-links">
+      <a href="https://AlishkaNepo.github.io/ufc-343/" target="_blank">UFC 343</a>
+      <a href="https://AlishkaNepo.github.io/P4P/" target="_blank">P4P</a>
+    </div>
+  </div>
 </header>
 
 <div class="event-info">
@@ -188,15 +189,9 @@ footer {
 <!-- 1 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter">
-      <div class="photo win"><img src="tomi.jpg"></div>
-      <span>Танат</span>
-    </div>
+    <div class="fighter"><div class="photo win"><img src="tanat.jpg"></div><span>Танат</span></div>
     <span class="vs">VS</span>
-    <div class="fighter">
-      <div class="photo"><img src="ali.jpg"></div>
-      <span>Али</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="ali.jpg"></div><span>Али</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Лёгкий вес • Главный бой</div>
@@ -207,15 +202,9 @@ footer {
 <!-- 2 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter">
-      <div class="photo win"><img src="beka2.jpg"></div>
-      <span>Бексултан</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="bek.jpg"></div><span>Бексултан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter">
-      <div class="photo"><img src="ibr.jpg"></div>
-      <span>Ибрахим</span>
-    </div>
+    <div class="fighter"><div class="photo win"><img src="ibrahim.jpg"></div><span>Ибрахим</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес • Со-главный бой</div>
@@ -226,15 +215,9 @@ footer {
 <!-- 3 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter">
-      <div class="photo"><img src="jahan.jpg"></div>
-      <span>Жахан</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="zhahan.jpg"></div><span>Жахан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter">
-      <div class="photo win"><img src="abosh.jpg"></div>
-      <span>Абылайхан</span>
-    </div>
+    <div class="fighter"><div class="photo win"><img src="abylai.jpg"></div><span>Абылайхан</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Лёгкий вес</div>
@@ -245,15 +228,9 @@ footer {
 <!-- 4 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter">
-      <div class="photo"><img src="beka2.jpg"></div>
-      <span>Бексултан</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="bek.jpg"></div><span>Бексултан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter">
-      <div class="photo"><img src="era.jpg"></div>
-      <span>Ерасыл</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="erasyl.jpg"></div><span>Ерасыл</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес</div>
@@ -261,17 +238,12 @@ footer {
   </div>
 </div>
 
+<!-- 5 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter">
-      <div class="photo"><img src="jahan.jpg"></div>
-      <span>Жахан</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="zhahan.jpg"></div><span>Жахан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter">
-      <div class="photo"><img src="ibr.jpg"></div>
-      <span>Ибрахим</span>
-    </div>
+    <div class="fighter"><div class="photo"><img src="ibrahim.jpg"></div><span>Ибрахим</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес</div>
