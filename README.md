@@ -202,9 +202,9 @@ footer {
 <!-- 2 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo"><img src="beka2.jpg"></div><span>Бексултан</span></div>
+    <div class="fighter"><div class="photo win"><img src="beka2.jpg"></div><span>Бексултан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter"><div class="photo win"><img src="ibr.jpg"></div><span>Ибрахим</span></div>
+    <div class="fighter"><div class="photo"><img src="ibr.jpg"></div><span>Ибрахим</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес • Со-главный бой</div>
