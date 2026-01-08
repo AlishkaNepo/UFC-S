@@ -189,7 +189,7 @@ footer {
 <!-- 1 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo win"><img src="tanat.jpg"></div><span>Танат</span></div>
+    <div class="fighter"><div class="photo win"><img src="tomi.jpg"></div><span>Танат</span></div>
     <span class="vs">VS</span>
     <div class="fighter"><div class="photo"><img src="ali.jpg"></div><span>Али</span></div>
   </div>
@@ -202,9 +202,9 @@ footer {
 <!-- 2 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo"><img src="bek.jpg"></div><span>Бексултан</span></div>
+    <div class="fighter"><div class="photo"><img src="beka2.jpg"></div><span>Бексултан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter"><div class="photo win"><img src="ibrahim.jpg"></div><span>Ибрахим</span></div>
+    <div class="fighter"><div class="photo win"><img src="ibr.jpg"></div><span>Ибрахим</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес • Со-главный бой</div>
@@ -215,9 +215,9 @@ footer {
 <!-- 3 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo"><img src="zhahan.jpg"></div><span>Жахан</span></div>
+    <div class="fighter"><div class="photo"><img src="jahan.jpg"></div><span>Жахан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter"><div class="photo win"><img src="abylai.jpg"></div><span>Абылайхан</span></div>
+    <div class="fighter"><div class="photo win"><img src="abosh.jpg"></div><span>Абылайхан</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Лёгкий вес</div>
@@ -228,9 +228,9 @@ footer {
 <!-- 4 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo"><img src="bek.jpg"></div><span>Бексултан</span></div>
+    <div class="fighter"><div class="photo"><img src="beka2.jpg"></div><span>Бексултан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter"><div class="photo"><img src="erasyl.jpg"></div><span>Ерасыл</span></div>
+    <div class="fighter"><div class="photo"><img src="era.jpg"></div><span>Ерасыл</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес</div>
@@ -241,9 +241,9 @@ footer {
 <!-- 5 -->
 <div class="fight-card">
   <div class="fighters">
-    <div class="fighter"><div class="photo"><img src="zhahan.jpg"></div><span>Жахан</span></div>
+    <div class="fighter"><div class="photo"><img src="jahan.jpg"></div><span>Жахан</span></div>
     <span class="vs">VS</span>
-    <div class="fighter"><div class="photo"><img src="ibrahim.jpg"></div><span>Ибрахим</span></div>
+    <div class="fighter"><div class="photo"><img src="ibr.jpg"></div><span>Ибрахим</span></div>
   </div>
   <div class="fight-info">
     <div class="weight">Полусредний вес</div>
